@@ -24,7 +24,7 @@ then
 	cat > /var/cache/bind/$ZONE.zone <<EOF
 \$ORIGIN .
 \$TTL 86400	; 1 day
-$ZONE		IN SOA	localhost. root.localhost. (
+$ZONE		IN SOA	${ZONE}. postmaster.${ZONE}. (
 				74         ; serial
 				3600       ; refresh (1 hour)
 				900        ; retry (15 minutes)
